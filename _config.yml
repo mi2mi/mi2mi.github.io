@@ -10,7 +10,7 @@ title: 地球冇得救
 name: 雕狸狮狒
 email: tyl1212@qq.com
 location: 宇宙黑洞旁边
-company: 巷仔专业宇宙飞船开光与核弹头抛光技术公司
+company: 巷仔砖家专注研究宇宙飞船开光与核弹头抛光技术
 company_url: http://www.youtube.com
 github_url: https://github.com/follom
 description: 专业研究开光与抛光技术300年
@@ -55,17 +55,17 @@ paginate_path: 'page:num'
 
 # Navigation. If you do not like these modules, just remove them :D
 navs:
-  -
-    href: /
-    label: Home
+#  -
+#    href: /
+#    label: Home
 
-  -
-    href: /open-source
-    label: Open-Source
+#  -
+#    href: /open-source
+#    label: Open-Source
 
-  -
-    href: /blog
-    label: Blog
+#  -
+#    href: /blog
+#    label: Blog
 
   -
     href: /bookmark
