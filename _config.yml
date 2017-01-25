@@ -10,7 +10,7 @@ title: 地球冇得救
 name: 雕狸狮狒
 email: tyl1212@qq.com
 location: 宇宙黑洞旁边
-company: 专注宇宙飞船开光与核弹头抛光技术
+company: 专注飞船开光与核弹头抛光技术
 company_url: http://www.youtube.com
 github_url: https://github.com/follom
 description: 专业研究开光与抛光技术300年
@@ -56,7 +56,7 @@ paginate_path: 'page:num'
 # Navigation. If you do not like these modules, just remove them :D
 navs:
   -
-    href: /
+    href: http://aswew.com
     label: 注册
 #  -
 #    href: /open-source
@@ -70,7 +70,7 @@ navs:
     href: /bookmark
     label: 登陆
   -
-    href: http://www.zoooda.com
+    href: /about
     label: 关于
 # Sidebar to show popular repo
 side_bar_repo_limit: 5 # Number of repos to show
