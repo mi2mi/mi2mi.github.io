@@ -1,48 +1,61 @@
----
-layout: post
-title: 标题党
-category: try
-tags: [try]
----
+https://www.facebook.com/pages/JavaScript/113124472034820
+ 
+ 
+Deep Linking in Angular
+-----------------------
+**With '#'**:
+Angular by default supports deep linking using **'#'**.
 
-Quick note about CSS animation. 
+**Ex**: https://www.deeplinking.com#/deep/linking
 
-## CSS Animation
+It has following drawbacks
 
-CSS3 animation lets an element gradually change from one style to another.
+ - Search engines (SEO) won't recognise the url after '#', so the page full path will not indexed.
+ - Google analytics also will not  capture the url after '#', so we may not get results as we want.
+ - Readability will decrease
 
-Two steps:
 
-1. Use `@keyframes` to define an animation.
-2. Set this animation on an element with animation properties
+**Removing '#'**: 
+ We have to do following to get rid of '#' in url.
+ 
+1. **Enable html5Mode**: We have to enable this in application config file.
 
-We could set properties one-by-one or with following shorthand:
+	> `$locationProvider.html5Mode(true).hashPrefix('!');`
 
-{% highlight css %}
-animation: [animation-name] [animation-duration] [animation-timing-function] [animation-delay] [animation-iteration-count] [animation-direction] [animation-fill-mode] [animation-play-state];
-{% endhighlight %}
+	Some browsers don't support html5Mode, for that we need to add hashPrefix('!').
 
-## @keyframes
+2. **Loading files**: Generally in header we include files as follows
 
-It defines what the animation looks like at each stage of the animation timeline. It is composed of:
+	> `<script src="vendor/angular.js"></script>` 
 
-* Name of the animation. For example, changeColor.
-* Stages: From 0% to 100% to represent the whole process of animation
-* CSS Properties: The CSS properties defined for each stage of the animation timeline.
+	After enabling html5Mode, files may not load correctly. To fix this we have to set
 
-Following example creates an animation called `changeColor` and assign it to `div:hover`:
+    > `<base `**`href="/"`**` />`
+	`or`
+    `<script `**`src="/vendor/angular.js"`**`></script>`
 
-{% highlight css %}
-@keyframes changeColor {
-  0% {
-    background: red;
-  }
-  60% {
-    background: blue;
-  }
-  100%{
-    background: green;
-  }
-}
+	**Note**: If you mention href value as **'/'**, it will refer to server url. If you want to point to other domain path, which can set to href (Ex: In localhost it will not work with **'/'**, so we need to mention it as `<base href="http://localhost/appFolder/" />`
 
-div:hover{
+3.  **Enabling Redirection**: Reload & Refresh will not work after **html5Mode** is enabled, because browser will look for folders and it leads to `404 Not Found`. To get it worked we need to redirect to `index.html` file, for that we have to add the following in `.htaccess` file (or in sever configuration)[2]:
+
+	>     RewriteEngine on
+	>     
+	>     # Don't rewrite files or directories
+	>     RewriteCond %{REQUEST_FILENAME} -f [OR]
+	>     RewriteCond %{REQUEST_FILENAME} -d
+	>     RewriteRule ^ - [L]
+	>      
+	>      # Rewrite everything else to index.html to allow html5 state links
+	>     RewriteRule ^ index.html [L]
+
+	**Note**: If you are using `debug.html` for development and `index.html` for production, then you have to redirect to debug.html instead of index.html for development purpose.
+
+4. You need to remove **'#'s** before urls if you use any. We use it when we use  $routeProvider as follows:
+
+	> `<a href="#deep/linking">Deep Linking</a>`
+
+**References**:
+
+1. https://en.wikipedia.org/wiki/Deep_linking
+2. https://github.com/angular-ui/ui-router/wiki/Frequently-Asked-Questions#how-to-configure-your-server-to-work-with-html5mode-->
+
