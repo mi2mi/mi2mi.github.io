@@ -6,20 +6,20 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: 地球冇得救 # ex. I m Chuan
-name: 雕狸狮狒 # ex. DONGChuan
+title: 地球冇得救
+name: 雕狸狮狒
 email: tyl1212@qq.com
-location: 宇宙黑洞旁边 # ex. Nice, France
-company: 原子弹弹头抛光技术
-company_url: http://www.youtube.com
-github_url: https://github.com/follom # ex. https://github.com/DONGChuan
-description: 原子弹弹头抛光技术研究
-favicon: favicon.png # Image must be in assets/images
-repository: follom/follom.github.io # ex. DONGChuan/DONGChuan.github.io
+location: 宇宙黑洞旁边
+company: 巷仔砖家
+company_url: www.youtube.com
+github_url: https://github.com/follom
+description: My understandings about the topics
+favicon: profile.png # Image must be in assets/images
 
 # The base hostname & protocol for your site
 # For local test, please use http://localhost:4000
-# For production, use your github page url. ex. http://dongchuan.github.io
+# For production, use your github page url. ex. http://follom.github.io
+#url: http://localhost:4000
 url: http://follom.github.io
 
 ## Gem
@@ -47,7 +47,7 @@ kramdown:
   enable_coderay: true
 
 # Disque
-disque: my_disque_settings # ex. httpdongchuangithubio.disqus.com
+disque: follom.disqus.com
 
 # Pagination
 paginate: 10
@@ -72,8 +72,8 @@ navs:
     label: Bookmark
 
   -
-    href: /about
-    label: About
+    href: http://www.zoooda.com
+    label: About Me
 
 # Sidebar to show popular repo
 side_bar_repo_limit: 5 # Number of repos to show
@@ -82,11 +82,9 @@ side_bar_repo_limit: 5 # Number of repos to show
 analytics :
   provider : google
   google :
-      tracking_id : 'tracking_id'  # ex. UA-72165600-X
+      tracking_id : 'UA-80236653-1'
 
 
 # For about.html. Fell free to create your own!
-skill_software_keywords: [Java, C, C++, Qt, Python, MySQL, Oracle, SQLite, PL/SQL, Design Patterns]
-skill_j2ee_keywords: [Spring, Struct, Hibernet, MyBatis, JSP]
-skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, NodeJS, ExpressJS, MongoDB, Redis, PHP, Symfony, Boostrap]
-skill_mobile_app_keywords: [Android, Sketch UI Desgin]
+skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, ReactJS, PrototypeJS, NodeJS, ExpressJS, MongoDB, Boostrap]
+skill_mobile_hybrid_app_keywords: [Cordova, Phonegap, Ionic]
