@@ -3,7 +3,6 @@ layout: post
 title: Angular Deep Linking
 category: AngularJS
 tags: [angular, deep linking]
-directUrl: http://www.divami.com/blog/deep-linking-angular/
 ---
 
 Angular by default provides deep linking using '#'. These urls may not inexed in search engines due to '#'. We can get rid of it using [Read more...](http://www.divami.com/blog/deep-linking-angular/)
