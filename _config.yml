@@ -85,3 +85,5 @@ side_bar_repo_limit: 5 # Number of repos to show
 # For about.html. Fell free to create your own!
 skill_web_keywords: [HTML, CSS, JS, JQuery, Ajax, AngularJS, ReactJS, PrototypeJS, NodeJS, ExpressJS, MongoDB, Boostrap]
 skill_mobile_hybrid_app_keywords: [Cordova, Phonegap, Ionic]
+
+theme: jekyll-theme-cayman
