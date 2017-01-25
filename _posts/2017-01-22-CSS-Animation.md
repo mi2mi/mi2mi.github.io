@@ -1,8 +1,8 @@
 ---
 layout: post
-title: CSS Animation
-category: CSS
-tags: [css]
+title: 标题党
+category: try
+tags: [try]
 ---
 
 Quick note about CSS animation. 
